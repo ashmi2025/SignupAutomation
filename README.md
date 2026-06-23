@@ -1,4 +1,4 @@
-## Signup Automation Script -
+## Signup Automation Script 
 
 ## How to Run
 1. Clone the repository
@@ -24,6 +24,20 @@
 - Phone: Auto-generated random number
 - Password: ABab@4456@
 
-## Note
-- OTP verification step requires manual input
-- After entering OTP manually, the rest of the form fills automatically
+## Approach & Challenges
+
+### Step 1 - Account Setup
+- Straightforward Selenium automation
+- Used standard sendKeys() and click() methods
+
+### Step 2, 3, 4 - React.js Fields
+- Was initially confused as standard sendKeys() 
+  was not working on these fields
+- After research, discovered the site uses React.js
+  which requires JavascriptExecutor to trigger 
+  internal input events
+- Successfully solved the issue using JavascriptExecutor
+
+### OTP Limitation
+- OTP requires manual input
+- No access to email/SMS API for full automation
